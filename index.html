@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharos - Ultimate Discord Utility Bot</title>
+    <link rel="icon" href="https://files.catbox.moe/vqisqk.png" type="image/png">
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Pharos</a>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                </div>
+                <button class="invite-btn">Invite to Server</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-container" id="profileContainer">
+                    <div class="profile-glass" id="profileGlass">
+                        <img src="https://files.catbox.moe/vqisqk.png" alt="Pharos Bot" class="profile-img" id="profileImg">
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1>Pharos</h1>
+                    <p>Pharos provides comprehensive information lookup for anime, manga, social media, and gaming profiles directly in your Discord server.</p>
+                    <div>
+                        <button class="features-btn" onclick="document.getElementById('features').scrollIntoView({ behavior: 'smooth' })">Explore Features</button>
+                        <button class="invite-btn">Invite Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Command Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>Anime Search</h3>
+                    <p>Get detailed anime information including episodes, ratings, and genres.</p>
+                    <div class="command-preview">
+                        <span class="command">+anime High School DxD</span>
+                        <div class="response">
+                            <span class="highlight">High School DxD</span><br>
+                            Episodes: <span class="highlight">12</span><br>
+                            Rating: <span class="highlight">7.3/10</span><br>
+                            Genres: <span class="highlight">Ecchi, Supernatural, Romance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Manga Lookup</h3>
+                    <p>Access complete manga details with volume counts and publication info.</p>
+                    <div class="command-preview">
+                        <span class="command">+manga Full Metal Panic! Sigma</span>
+                        <div class="response">
+                            <span class="highlight">Full Metal Panic! Sigma</span><br>
+                            Volumes: <span class="highlight">19</span><br>
+                            Chapters: <span class="highlight">90</span><br>
+                            Rating: <span class="highlight">8.3/10</span><br>
+                            Genres: <span class="highlight">Shounen, Mecha, Action</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>TikTok Profiles</h3>
+                    <p>View TikTok user statistics and account information.</p>
+                    <div class="command-preview">
+                        <span class="command">+tiktok m</span>
+                        <div class="response">
+                            <span class="highlight">m 🔒</span><br>
+                            Followers: <span class="highlight">1</span><br>
+                            Following: <span class="highlight">15</span><br>
+                            Likes: <span class="highlight">0</span><br>
+                            Created: <span class="highlight">November 7, 2021</span><br>
+                            Last Nickname Change: <span class="highlight">November 9, 2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>VRChat Lookup</h3>
+                    <p>Check VRChat user status and profile details.</p>
+                    <div class="command-preview">
+                        <span class="command">+vrchat mq__</span>
+                        <div class="response">
+                            <span class="highlight">VRChat - mq__</span><br>
+                            Status: <span class="highlight">active</span><br>
+                            User ID: <span class="highlight">usr_e1b99f0c-c3da-4995-b8f3-68a5db7a9a02</span><br>
+                            Last Platform: <span class="highlight">standalonewindows</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Roblox Profiles</h3>
+                    <p>View Roblox user information and account history.</p>
+                    <div class="command-preview">
+                        <span class="command">+roblox tmobileted</span>
+                        <div class="response">
+                            <span class="highlight">TmobileTed (@TmobileTed)</span><br>
+                            User ID: <span class="highlight">5809210724</span><br>
+                            Account Created: <span class="highlight">April 21, 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Utility Commands</h3>
+                    <p>Additional tools for moderation, information, and server management.</p>
+                    <div class="command-preview">
+                        <span class="command">+help</span>
+                        <div class="response">
+                            View all available commands<br>
+                            and bot functionality.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <p class="copyright">© 2025 Pharos. Not affiliated with Discord.</p>
+        </div
+    </footer>
+
+    <script>
+        // 3D Profile Effect
+        const profileContainer = document.getElementById('profileContainer');
+        const profileGlass = document.getElementById('profileGlass');
+        
+        profileContainer.addEventListener('mousemove', (e) => {
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+            profileGlass.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+        
+        profileContainer.addEventListener('mouseenter', () => {
+            profileGlass.style.transition = 'none';
+        });
+        
+        profileContainer.addEventListener('mouseleave', () => {
+            profileGlass.style.transition = 'all 0.5s ease';
+            profileGlass.style.transform = 'rotateY(0deg) rotateX(0deg)';
+        });
+
+        // Create stars
+        const starsContainer = document.getElementById('stars');
+        const starCount = 100;
+        
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            // Random properties
+            const size = Math.random() * 2 + 1;
+            const posX = Math.random() * window.innerWidth;
+            const posY = Math.random() * window.innerHeight;
+            const delay = Math.random() * 5;
+            const duration = Math.random() * 5 + 3;
+            
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${posX}px`;
+            star.style.top = `${posY}px`;
+            star.style.animationDelay = `${delay}s`;
+            star.style.animationDuration = `${duration}s`;
+            
+            starsContainer.appendChild(star);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
