@@ -3,30 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service</title>
-    <link rel="stylesheet" href="/css/tos.css">
+    <title>Pharos - Terms of Service</title>
+    <style>
+        :root {
+            --glass-blur: 12px;
+            --glass-opacity: 0.85;
+            --glass-border: 1px solid rgba(255, 255, 255, 0.15);
+            --glass-highlight: 1px solid rgba(255, 255, 255, 0.25);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --glass-background: rgba(255, 255, 255, 0.1);
+            --transition-speed: 0.4s;
+            --text-color: #ffffff;
+            --bg-color: #000000;
+            --accent-color: #5865F2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar Styles */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #2d2d2d;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #777;
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #555 #2d2d2d;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 30px 0;
+            position: relative;
+            z-index: 10;
+            backdrop-filter: blur(var(--glass-blur));
+            background: rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-color);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        /* Main Content */
+        .tos-content {
+            padding: 60px 0;
+        }
+
+        .tos-glass {
+            backdrop-filter: blur(var(--glass-blur));
+            background: var(--glass-background);
+            border-radius: 20px;
+            border: var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            padding: 30px 0;
+            text-align: center;
+            backdrop-filter: blur(var(--glass-blur));
+            background: rgba(0, 0, 0, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            opacity: 0.5;
+            font-size: 0.85rem;
+        }
+
+        /* Stars Background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="content">
-        <h1>Terms of Service</h1>
-        <p class="updated">Last Updated: 2/24/25</p>
+    <div class="stars" id="stars"></div>
+    
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Pharos</a>
+            </nav>
+        </div>
+    </header>
 
-        <p>By using our Discord bot, you agree to these terms.</p>
+    <main class="tos-content">
+        <div class="container">
+            <div class="tos-glass">
+                <h1>Terms of Service</h1>
+                
+                <h2>Acceptance of Terms</h2>
+                <p>By using the Pharos Discord bot ("the Bot"), you agree to be bound by these Terms of Service. If you do not agree, you may not use the Bot.</p>
+                
+                <h2>Bot Usage</h2>
+                <ul>
+                    <li>The Bot is provided "as is" without warranties of any kind</li>
+                    <li>Server administrators are responsible for configuring the Bot's behavior</li>
+                    <li>You may not use the Bot for illegal activities or content</li>
+                </ul>
+                
+                <h2>Prohibited Content</h2>
+                <p>The Bot may not be used to distribute or facilitate:</p>
+                <ul>
+                    <li>Illegal content or activities</li>
+                    <li>Malware or harmful software</li>
+                    <li>Harassment or hate speech</li>
+                    <li>NSFW content in non-NSFW channels</li>
+                </ul>
+                
+                <h2>Moderation</h2>
+                <p>Server administrators using the Bot's moderation features:</p>
+                <ul>
+                    <li>Are solely responsible for their server's moderation decisions</li>
+                    <li>Must comply with Discord's Terms of Service</li>
+                    <li>Must not automate punishments without human review</li>
+                </ul>
+                
+                <h2>Data Processing</h2>
+                <p>As outlined in our Privacy Policy:</p>
+                <ul>
+                    <li>Message content is processed in real-time only</li>
+                    <li>No message content is stored after processing</li>
+                    <li>Processing is limited to configured keyword detection</li>
+                </ul>
+                
+                <h2>Limitation of Liability</h2>
+                <p>We are not liable for:</p>
+                <ul>
+                    <li>Any damages caused by use of the Bot</li>
+                    <li>Incorrect moderation actions taken by server administrators</li>
+                    <li>Downtime or service interruptions</li>
+                </ul>
+                
+                <h2>Changes to Terms</h2>
+                <p>We reserve the right to modify these terms at any time. Continued use of the Bot constitutes acceptance of the modified terms.</p>
+                
+                <h2>Termination</h2>
+                <p>We may terminate access to the Bot for any server that violates these terms or Discord's Terms of Service.</p>
+            </div>
+        </div>
+    </main>
 
-        <h2>1. Acceptable Use</h2>
-        <p>You must comply with Discord’s Terms of Service and not use our bot for illegal or harmful activities.</p>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
 
-        <h2>2. Restrictions</h2>
-        <p>You are not allowed to exploit, modify, or disrupt the bot’s service in any way.</p>
-
-        <h2>3. Liability</h2>
-        <p>We are not responsible for any damage or data loss caused by using our bot.</p>
-
-        <h2>4. Termination</h2>
-        <p>We reserve the right to terminate access to the bot for any user who violates these terms.</p>
-    </div>
-    <div class="footer">
-        <p>&copy; 2025 millicas. All rights reserved. | <a href="/privacy.html">Privacy Policy</a> | <a href="/tos.html">Terms of Service</a></p>
-    </div>
+    <script>
+        // Create stars
+        const starsContainer = document.getElementById('stars');
+        const starCount = 100;
+        
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            // Random properties
+            const size = Math.random() * 2 + 1;
+            const posX = Math.random() * window.innerWidth;
+            const posY = Math.random() * window.innerHeight;
+            const delay = Math.random() * 5;
+            const duration = Math.random() * 5 + 3;
+            
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${posX}px`;
+            star.style.top = `${posY}px`;
+            star.style.animationDelay = `${delay}s`;
+            star.style.animationDuration = `${duration}s`;
+            
+            starsContainer.appendChild(star);
+        }
+    </script>
 </body>
 </html>
