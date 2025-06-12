@@ -3,33 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
-    <link rel="stylesheet" href="/css/tos.css">
+    <title>Pharos - Privacy Policy</title>
+    <link rel="icon" href="https://files.catbox.moe/vqisqk.png" type="image/png">
+    <link rel="stylesheet" href="./css/privacy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="content">
-        <h1>Privacy Policy</h1>
-        <p class="updated">Last Updated: 2/24/25</p>
+    <div class="stars" id="stars"></div>
+    
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Pharos</a>
+            </nav>
+        </div>
+    </header>
 
-        <p>By using our bot, you agree to this Privacy Policy.</p>
-
-        <h2>Data Collection</h2>
-        <p>Message Content Data is collected.</p>
-
-        <h2>Data Usage</h2>
-        <p>Collected data is used for the sole purpose of a one-time processing. Message content is read and processed automatically by a computer.</p>
-        <p>The purpose of this is to scan messages for keywords that a Server Owner has prohibited or added auto-response mechanisms for.</p>
-        <p><strong>Data is not saved or recorded anywhere.</strong></p>
-
-        <h2>Opting Out</h2>
-        <p>You can opt out of data collection by the bot using the contact info below.</p>
-        <p><strong>Note:</strong> Opting out may result in limited access to certain features.</p>
-
-        <h2>Requesting Data</h2>
-        <p>You may request deletion or access to data through the contact methods provided below.</p>
-    </div>
-    <div class="footer">
-        <p>&copy; 2025 millicas. All rights reserved. | <a href="/privacy.html">Privacy Policy</a> | <a href="/tos.html">Terms of Service</a></p>
-    </div>
+    <main class="privacy-content">
+        <div class="container">
+            <div class="privacy-glass">
+                <h1>Privacy Policy</h1>
+                
+                <h2>Data Collection and Usage</h2>
+                <p>Collected data is used for the sole purpose of one-time processing. Message content is read and processed automatically by a computer.</p>
+                
+                <h2>Purpose of Processing</h2>
+                <p>The purpose of this processing is to scan messages for keywords that a Server Owner has prohibited or added auto-response mechanisms for.</p>
+                
+                <h2>Data Retention</h2>
+                <p>Data is not saved or recorded anywhere. All processing occurs in memory and is discarded immediately after processing completes.</p>
+                
+                <h2>Information We Access</h2>
+                <ul>
+                    <li>Message content (for keyword scanning)</li>
+                    <li>Server configuration (for moderation settings)</li>
+                    <li>User IDs (for moderation actions)</li>
+                </ul>
+                
+                <h2>What We Don't Store</h2>
+                <ul>
+                    <li>Message content after processing</li>
+                    <li>User personal information</li>
+                    <li>Any logs of user activity</li>
+                </ul>
+                
+                <h2>Changes to This Policy</h2>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Create stars
+        const starsContainer = document.getElementById('stars');
+        const starCount = 100;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            const size = Math.random() * 2 + 1;
+            const posX = Math.random() * window.innerWidth;
+            const posY = Math.random() * window.innerHeight;
+            const delay = Math.random() * 5;
+            const duration = Math.random() * 5 + 3;
+            
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${posX}px`;
+            star.style.top = `${posY}px`;
+            star.style.animationDelay = `${delay}s`;
+            star.style.animationDuration = `${duration}s`;
+            
+            starsContainer.appendChild(star);
+        }
+    </script>
 </body>
 </html>
